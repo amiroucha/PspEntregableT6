@@ -4,20 +4,22 @@
         <Console name="Console" target="SYSTEM_OUT">
             <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
         </Console>
-        <File name="FileAppendTrue" fileName="logs/logAppendTrue.log" append="true">
-            <PatternLayout>
-                <Pattern>%d{HH:mm:ss.SSS} [%t] %-5level - %msg%n</Pattern>
-            </PatternLayout>
-        </File>
+
+        <RollingFile name="DialyRollingFile" fileName="logs/log.html"
+                     filePattern="%d{yyyy-MM-dd}" append="true">
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1"/>
+            </Policies>
+        </RollingFile>
+
         <Console name="ConsoleHTML" target="SYSTEM_OUT">
-            <HTMLLayout>
-            </HTMLLayout>
+            <HTMLLayout> </HTMLLayout>
         </Console>
 
     </Appenders>
     <Loggers>
         <Root level="info">
-            <AppenderRef ref="FileAppendTrue"/>
+            <AppenderRef ref="DialyRollingFile"/>
         </Root>
     </Loggers>
 </Configuration>
