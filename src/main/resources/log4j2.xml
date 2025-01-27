@@ -6,7 +6,7 @@
             <HTMLLayout>
             </HTMLLayout>
             <Policies>
-                <TimeBasedTriggeringPolicy interval="1"/>
+                <TimeBasedTriggeringPolicy />
             </Policies>
         </RollingFile>
 
