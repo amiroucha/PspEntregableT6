@@ -6,13 +6,13 @@
             <HTMLLayout>
             </HTMLLayout>
             <Policies>
-                <TimeBasedTriggeringPolicy />
+                <TimeBasedTriggeringPolicy interval="1"/>
             </Policies>
         </RollingFile>
 
     </Appenders>
     <Loggers>
-        <Root level="debug">
+        <Root level="error">
             <AppenderRef ref="DialyRollingFile"/>
         </Root>
     </Loggers>
