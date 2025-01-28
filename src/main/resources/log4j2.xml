@@ -9,7 +9,6 @@
                 <TimeBasedTriggeringPolicy interval="1"/>
             </Policies>
         </RollingFile>
-
     </Appenders>
     <Loggers>
         <Root level="debug">
